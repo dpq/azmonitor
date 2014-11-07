@@ -8,7 +8,6 @@ t = Terminal()
 
 def on_message(ws, message):
     data = sorted(json.loads(message), key=lambda x: x[0])
-    row = 0
     with t.location(0, 0):
         print "Unit ID    Lat        Lon       Alt       Temp    Humidity  Pressure"
     for i in range(len(data)):
